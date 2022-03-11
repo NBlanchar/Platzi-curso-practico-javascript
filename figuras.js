@@ -1,20 +1,34 @@
 // Codigo del Cuadrado
 function perimetroCuadrado (lado){
-    return lado * 4;
+    let resultado = lado * 4;
+    return resultado + " cm"
 };
 
 function areaCuadrado(lado){
-    return lado * lado
+    let resultado = lado * lado
+    return resultado + " cm^2"
 };
 
 
 // Codigo del Triangulo
 function perimetroTriangulo (lado1,lado2,base){
-    return lado1 + lado2 + base;
+    let resultado= lado1 + lado2 + base;
+    return resultado + " cm"
 };
 
 function areaTriangulo (base, altura){
-    return (base * altura) /2;
+    let resultado= (base * altura) /2;
+    return resultado + " cm^2"
+};
+
+// Codigo Triangulo Isósceles
+function alturaTrianguloIsoceles (lado1,lado2,base){
+    if(lado1!=lado2){
+        return "No es un Triangulo Isoceles"
+    }else{
+        resultado = Math.sqrt(lado1**2 - ((base**2)/4))
+    }
+    return "La altura del triangulo es: " + resultado + " cm"
 };
 
 //Codigo Circulo
@@ -61,6 +75,17 @@ function calcularPerimetroTriangulo(){
     
     const perimetro = perimetroTriangulo(lado1,lado2,base);
     alert (perimetro);
+};
+function calcularAlturaTrianguloIsoceles(){
+    const input1 = document.getElementById("InputLadoTriangulo1");
+    const lado1 = Number(input1.value);
+    const input2 = document.getElementById("InputLadoTriangulo2");
+    const lado2 = Number(input2.value);
+    const input3 = document.getElementById("InputBaseTriangulo");
+    const base = Number(input3.value);
+    
+    const altura = alturaTrianguloIsoceles(lado1,lado2,base);
+    alert (altura);
 };
 
 function calcularAreaTriangulo(){
