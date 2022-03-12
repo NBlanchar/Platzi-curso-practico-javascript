@@ -4,9 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Estadistica</title>
 </head>
 <body>
+    <header>
+        <h1>Estadistica</h1>
+        <p>Tercer Taller Curso Practico JS</p>
+    </header>
+    <section>
+        <h2>Calcular el promedio, moda y mediana de una lista</h2>
+        <form>
+            <label for="inputNumber">Digita numero para la lista:</label>
+            <input type="number" id="inputNumber"/>
+            <br>
+            <button type="button" onclick="onClickButtonAddNumber()">Agregar Numero</button>
+            <br>
+            <button type="button" onclick="onClickButtonCalculateAverage()">Calcular el Promedio</button>
+            <button type="button" onclick="onClickButtonCalculateMode()">Calcular la Moda</button>
+            <button type="button" onclick="onClickButtonCalculateMedian()">Calcular la Media</button>
+            <p id="lista">No hay elementos en la lista</p>
+            <p id="ResultIP"></p>
+        </form>
+    </section>
     <script src="./estadistica.js"></script>
 </body>
 </html>
