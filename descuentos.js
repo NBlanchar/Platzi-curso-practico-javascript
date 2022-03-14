@@ -32,9 +32,9 @@ function calcularPrecioConDescuento(precioOriginal,descuento){
 
 function onClickButtonPriceDiscount(){
     const inputPrice = document.getElementById("inputPrice");
-    const priceValue = inputPrice.value;
+    const priceValue = Number(inputPrice.value);
     const inputDiscount = document.getElementById("InputDiscount");
-    const discountValue = inputDiscount.value;
+    const discountValue = Number(inputDiscount.value);
 
     const precioConDescuento = calcularPrecioConDescuento(priceValue,discountValue);
 
@@ -44,7 +44,7 @@ function onClickButtonPriceDiscount(){
 
 function onClickButtonPriceCoupon(){
     const inputPrice = document.getElementById("inputPrice");
-    const priceValue = inputPrice.value;
+    const priceValue = Number(inputPrice.value);
     const InputCoupon = document.getElementById("InputCoupon");
     const CouponValue = InputCoupon.value;
 

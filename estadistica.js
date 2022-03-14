@@ -16,20 +16,23 @@ function calcularPromedio(lista){
     return promedioLista;
 }
 
-function calcularMedia(lista){
+function calcularMediana(lista){
+    // Ordenar Lista
     lista.sort(function(a,b){
         return a-b
     })
+    // Obtener mitad de la lista
     let mitad = parseInt(lista.length / 2)
-    let media; 
+    let  Mediana; 
+    // Mediana dependiendo de si la listadatos son pares o impares
     if(lista.length % 2 ===0 ){
         let elemento1= lista[mitad-1]
         let elemento2= lista[mitad]
-        media = (elemento1 + elemento2)/2
+         Mediana = (elemento1 + elemento2)/2
     }else{
-        media = lista[mitad]
+         Mediana = lista[mitad]
     }
-    return media
+    return  Mediana
 }
 
 function calcularModa(lista){
@@ -69,7 +72,7 @@ function onClickButtonCalculateAverage(){
 }
 
 function onClickButtonCalculateMedian(){
-    const media= calcularMedia(array) 
+    const media= calcularMediana(array) 
     const resultP = document.getElementById("ResultIP");
     resultP.innerText = "La media de la lista es: " +media;
 }

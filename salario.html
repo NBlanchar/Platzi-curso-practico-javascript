@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salarios | Platzi</title>
+</head>
+<body>
+    <header>
+        <h1>salario</h1>
+        <p>Cuarto Taller Curso Practico JS</p>
+    </header>
+    <section>
+        <h2>Calcular la mediana de salario y la mediana del 10% de los mejores salarios</h2>
+        <form>
+            <label for="inputName">Digita nombre de la Persona:</label>
+            <input type="name" id="inputName"/>
+            <br>
+            <label for="inputSalary">Digita salario de la Persona:</label>
+            <input type="salary" id="inputSalary"/>
+            <br>            
+            <button type="button" onclick="onClickButtonAddSalary()">Agregar Persona</button>
+            <br>
+            <button type="button" onclick="onClickButtonCalculateMedian()">Calcular la mediana</button>
+            <p id="lista"></p>
+            <p id="ResultIP"></p>
+        </form>
+    </section>
+    <script src="./salario.js"></script>
+    <script src="./analisis.js"></script>
+</body>
+</html>
